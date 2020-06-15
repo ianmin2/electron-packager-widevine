@@ -1,11 +1,11 @@
 {
     "name": "electron-packager-widevine",
-    "version": "0.0.1-development",
+    "version": "0.0.3-development",
     "description": "Customize and package your Electron WideVine app via JS or CLI",
     "main": "src/index.js",
     "types": "src/index.d.ts",
     "bin": {
-        "electron--widevine": "bin/electron-packager.js"
+        "electron-packager-widevine": "bin/electron-packager.js"
     },
     "repository": {
         "type": "git",

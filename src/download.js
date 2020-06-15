@@ -2,7 +2,7 @@
 
 const common = require('./common')
 const debug = require('debug')('electron-packager-widevine')
-const { downloadArtifact } = require('@electron/get')
+const { downloadArtifact } = require('electron-widevine-get')
 const semver = require('semver')
 const targets = require('./targets')
 

@@ -282,7 +282,7 @@ declare namespace electronPackager {
      */
     derefSymlinks?: boolean;
     /**
-     * If present, passes custom options to [`@electron/get`](https://npm.im/@electron/get). See
+     * If present, passes custom options to [`electron-widevine-get`](https://npm.im/electron-widevine-get). See
      * the module for option descriptions, proxy support, and defaults. Supported parameters
      * include, but are not limited to:
      * - `cacheRoot` (*string*): The directory where prebuilt, pre-packaged Electron downloads are cached.

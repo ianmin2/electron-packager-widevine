@@ -3,7 +3,7 @@
 const common = require('../src/common')
 const download = require('../src/download')
 const fs = require('fs-extra')
-const { getHostArch } = require('@electron/get')
+const { getHostArch } = require('electron-widevine-get')
 const packager = require('..')
 const path = require('path')
 const sinon = require('sinon')

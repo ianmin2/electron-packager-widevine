@@ -36,13 +36,13 @@ asar               whether to package the source code within your app into an ar
                    - unpackDir: unpacks the dir to the app.asar.unpacked directory whose names glob
                      pattern or exactly match this string. It's relative to the <sourcedir>.
 build-version      build version to set for the app
-download           a list of sub-options to pass to @electron/get. They are specified via dot
+download           a list of sub-options to pass to electron-widevine-get. They are specified via dot
                    notation, e.g., --download.cacheRoot=/tmp/cache
                    Properties supported:
                    - cacheRoot: directory of cached Electron downloads. For default value, see
-                     @electron/get documentation
+                     electron-widevine-get documentation
                    - mirrorOptions: alternate URL options for downloading Electron zips. See
-                     @electron/get documentation for details
+                     electron-widevine-get documentation for details
                    - rejectUnauthorized: whether SSL certs are required to be valid when downloading
                      Electron. Defaults to true, use --no-download.rejectUnauthorized to disable
                      checks.
