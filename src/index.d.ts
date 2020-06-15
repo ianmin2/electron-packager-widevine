@@ -9,7 +9,7 @@
 // * Florian Keller <https://github.com/ffflorian>
 
 import { CreateOptions as AsarOptions } from 'asar';
-import { ElectronDownloadRequestOptions as ElectronDownloadOptions } from '@electron/get';
+import { ElectronDownloadRequestOptions as ElectronDownloadOptions } from 'electron-widevine-get';
 import { NotarizeOptions } from 'electron-notarize';
 import { SignOptions } from 'electron-osx-sign';
 
@@ -24,7 +24,7 @@ import { SignOptions } from 'electron-osx-sign';
  * Short example:
  *
  * ```javascript
- * const packager = require('electron-packager')
+ * const packager = require('electron-packager-widevine')
  *
  * async function bundleElectronApp(options) {
  *   const appPaths = await packager(options)
@@ -68,8 +68,8 @@ declare namespace electronPackager {
    * **callback-style functions are not supported by `serialHooks`.** For example:
    *
    * ```javascript
-   * const packager = require('electron-packager')
-   * const { serialHooks } = require('electron-packager/src/hooks')
+   * const packager = require('electron-packager-widevine')
+   * const { serialHooks } = require('electron-packager-widevine/hooks')
    *
    * packager({
    *   // ...
