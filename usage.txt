@@ -1,11 +1,11 @@
-Usage: electron-packager <sourcedir> <appname> [options...]
+Usage: electron-packager-widevine <sourcedir> <appname> [options...]
 
 Required parameters
 
 sourcedir          the base directory of the application source
 
-  Examples:        electron-packager ./
-                   electron-packager ./ --all
+  Examples:        electron-packager-widevine ./
+                   electron-packager-widevine ./ --all
 
 Optional parameters
 

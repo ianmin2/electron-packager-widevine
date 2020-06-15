@@ -8,6 +8,8 @@ Package your [Electron](https://electronjs.org) app into OS-specific bundles (`.
 
 Forked from [electron/electron-packager](https://github.com/electron/electron-packager)
 
+Relies primarily on the electron widevine builds provided by [castlabs/electron-releases](https://github.com/castlabs/electron-releases/releases)
+
 Electron Packager WideVine  is a command line tool and Node.js library that bundles a widevine dependent Electron-based application
 source code with a renamed Electron executable and supporting files into folders ready for distribution.
 
