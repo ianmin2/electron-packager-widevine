@@ -1,38 +1,15 @@
-# Electron Packager
+# Electron Packager WideVine
 
-Package your [Electron](https://electronjs.org) app into OS-specific bundles (`.app`, `.exe`, etc.) via JavaScript or the command line.
-
-[![CircleCI Build Status](https://circleci.com/gh/electron/electron-packager/tree/master.svg?style=svg)](https://circleci.com/gh/electron/electron-packager/tree/master)
-[![Coverage Status](https://codecov.io/gh/electron/electron-packager/branch/master/graph/badge.svg)](https://codecov.io/gh/electron/electron-packager)
-[![NPM](https://badgen.net/npm/v/electron-packager)](https://npm.im/electron-packager)
-![Dependabot Status](https://flat.badgen.net/dependabot/electron/electron-packager?icon=dependabot)
-
-[Supported Platforms](#supported-platforms) |
-[Installation](#installation) |
-[Usage](#usage) |
-[API](https://electron.github.io/electron-packager/master/) |
-[Contributing](https://github.com/electron/electron-packager/blob/master/CONTRIBUTING.md) |
-[Support](https://github.com/electron/electron-packager/blob/master/SUPPORT.md) |
-[Related Apps/Libraries](#related) |
-[FAQ](https://github.com/electron/electron-packager/blob/master/docs/faq.md) |
-[Release Notes](https://github.com/electron/electron-packager/blob/master/NEWS.md)
+Package your [Electron](https://electronjs.org) app into OS-specific bundles (`.app`, `.exe`, etc.) via JavaScript or the command line with support for media streaming using the google widevine's library.
 
 ----
 
 ## About
 
-Electron Packager is a command line tool and Node.js library that bundles Electron-based application
+Forked from [electron/electron-packager](https://github.com/electron/electron-packager)
+
+Electron Packager WideVine  is a command line tool and Node.js library that bundles a widevine dependent Electron-based application
 source code with a renamed Electron executable and supporting files into folders ready for distribution.
-
-For creating distributables like installers and Linux packages, consider using either [Electron
-Forge](https://github.com/electron-userland/electron-forge) (which uses Electron Packager
-internally), or one of the [related Electron tools](#distributable-creators), which utilizes
-Electron Packager-created folders as a basis.
-
-Note that packaged Electron applications can be relatively large. A zipped, minimal Electron
-application is approximately the same size as the zipped prebuilt binary for a given target
-platform, target arch, and [Electron version](https://github.com/electron/electron/releases)
-_(files named `electron-v${version}-${platform}-${arch}.zip`)_.
 
 ## Supported Platforms
 
@@ -56,10 +33,10 @@ This module requires Node.js 10.0 or higher to run.
 
 ```sh
 # For use in npm scripts (recommended)
-npm install electron-packager --save-dev
+npm install electron-packager-widevine --save-dev
 
 # For use from the CLI
-npm install electron-packager -g
+npm install electron-packager-widevine -g
 ```
 
 ### Building Windows apps from non-Windows platforms
@@ -72,14 +49,16 @@ later needs to be installed. On macOS, it is installable via [Homebrew](http://b
 
 ## Usage
 
+Similar to the electron-packager API
+
 JavaScript API usage can be found in the [API documentation](https://electron.github.io/electron-packager/master/modules/electronpackager.html).
 
 ### From the Command Line
 
-Running electron-packager from the command line has this basic form:
+Running electron-packager-widevine from the command line has this basic form:
 
 ```
-electron-packager <sourcedir> <appname> --platform=<platform> --arch=<arch> [optional flags...]
+electron-packager-widevine <sourcedir> <appname> --platform=<platform> --arch=<arch> [optional flags...]
 ```
 
 This will:
@@ -93,7 +72,7 @@ This will:
   platforms/architectures will be created.
 * Otherwise, a single bundle for the host platform/architecture will be created.
 
-For an overview of the other optional flags, run `electron-packager --help` or see
+For an overview of the other optional flags, run `electron-packager-widevine --help` or see
 [usage.txt](https://github.com/electron/electron-packager/blob/master/usage.txt). For
 detailed descriptions, see the [API documentation](https://electron.github.io/electron-packager/master/modules/electronpackager.html).
 
@@ -126,7 +105,7 @@ foobar
 
 …and that the following is true:
 
-* `electron-packager` is installed globally
+* `electron-packager-widevine` is installed globally
 * `productName` in `package.json` has been set to `Foo Bar`
 * The `electron` module is in the `devDependencies` section of `package.json`, and set to the exact version of `1.4.15`.
 * `npm install` for the `Foo Bar` app has been run at least once
@@ -134,10 +113,10 @@ foobar
 When one runs the following command for the first time in the `foobar` directory:
 
 ```
-electron-packager .
+electron-packager-widevine .
 ```
 
-`electron-packager` will do the following:
+`electron-packager-widevine` will do the following:
 
 * Use the current directory for the `sourcedir`
 * Infer the `appname` from the `productName` in `package.json`
